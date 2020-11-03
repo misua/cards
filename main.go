@@ -3,11 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	//var card string = "Ace of Spades"
-	card := newCard()
-	//card = "Five of Diamons" if you want to assign new value you dont need to put :
 
-	fmt.Println(card)
+	cards := []string{"Ace of Spades", newCard()}
+	cards = append(cards, "six of Hearts")
+
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 }
 
 func newCard() string {
